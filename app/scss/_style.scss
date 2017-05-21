@@ -3,12 +3,16 @@ html, body {
 	height:100%;
 	padding:0;
 	margin:0;
-	font-family: 'Lato', sans-serif;
 	overflow-x:hidden;
     transition:all .2s linear;
     -o-transition:all .2s linear;
     -moz-transition:all .2s linear;
     -webkit-transition:all .2s linear;
+	font-family: 'Open Sans', sans-serif;
+}
+
+img{
+	width: 100%;
 }
 
 .clearfix:after{
@@ -23,3 +27,69 @@ html, body {
   	text-decoration: none;
    }
  }
+
+ .wrapper{
+   width: 1280px;
+   margin: 0 auto;
+ }
+
+ body{
+	 background-color: $white-three;
+ }
+
+ .col {
+ 	display: block;
+ 	float:left;
+ 	margin-left: 2.3%;
+  &:first-child{
+    margin-left: 0;
+  }
+ }
+
+.span_1 {
+  width : 6.2%;
+}
+
+.span_2 {
+  width : 14.75%;
+}
+
+.span_3 {
+  width : 23.25%;
+}
+
+.span_4 {
+  width : 31.75%;
+}
+
+.span_5 {
+  width : 40.25%;
+}
+
+.span_6 {
+  width : 48.75%;
+}
+
+.span_7 {
+  width : 57.25%;
+}
+
+.span_8 {
+  width : 65.75%;
+}
+
+.span_9 {
+  width : 74.25%;
+}
+
+.span_10 {
+  width : 82.75%;
+}
+
+.span_11 {
+  width : 91.25%;
+}
+
+.span_12 {
+  width : 100%;
+}
