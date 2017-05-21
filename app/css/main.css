@@ -300,8 +300,12 @@ img {
   display: block;
   clear: both; }
 
-a:link, a:visited {
-  text-decoration: none; }
+.flex-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 .wrapper {
   width: 1280px;
@@ -384,7 +388,8 @@ body {
         font-family: 'Open Sans', sans-serif;
         font-size: 18px;
         text-align: center;
-        color: #34414a; }
+        color: #34414a;
+        text-decoration: none; }
   #header #search {
     height: 100%;
     float: left;
@@ -408,3 +413,74 @@ body {
 
 article {
   background-color: white; }
+  article a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #a65447;
+    text-decoration: underline; }
+    article a + a {
+      float: right; }
+  article .title {
+    padding: 30px 30px 0 30px; }
+    article .title.decale {
+      margin-left: -110px;
+      background-color: white;
+      padding-bottom: 30px; }
+    article .title h3 {
+      padding: 5px 0; }
+  article .content {
+    padding: 10px 30px 30px 30px; }
+    article .content p {
+      padding-bottom: 10px; }
+  article .ariane {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px; }
+
+.main > div > article {
+  height: 415px;
+  overflow: hidden; }
+  .main > div > article:first-of-type {
+    background-color: #ebebeb; }
+  .main > div > article:last-of-type .title {
+    padding-bottom: 30px; }
+  .main > div > article:last-of-type .image {
+    width: 34%; }
+
+.main > article .content {
+  padding-right: 0; }
+
+.rechercher {
+  background-color: #a65447;
+  text-align: center;
+  padding: 30px; }
+  .rechercher h3 {
+    padding-bottom: 30px; }
+  .rechercher form {
+    margin: 0 auto;
+    position: relative; }
+    .rechercher form input[type="text"] {
+      width: 90%;
+      height: 45px;
+      border: 2px solid #d96e5d;
+      color: #34414a;
+      padding: 5px; }
+      .rechercher form input[type="text"]::-webkit-input-placeholder {
+        font-style: italic; }
+      .rechercher form input[type="text"]:-ms-input-placeholder {
+        font-style: italic; }
+      .rechercher form input[type="text"]::placeholder {
+        font-style: italic; }
+    .rechercher form button {
+      width: 9%;
+      height: 45px;
+      margin-left: -5px;
+      border: 2px solid #d96e5d;
+      border-left: 0;
+      background-color: white;
+      color: #34414a; }
+    .rechercher form #advenced-research {
+      font-size: 16px;
+      color: #fafafa;
+      position: absolute;
+      width: inherit;
+      line-height: 45px; }

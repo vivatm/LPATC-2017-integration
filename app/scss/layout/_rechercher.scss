@@ -1,0 +1,38 @@
+.rechercher{
+  background-color: $earth;
+  text-align: center;
+  padding: 30px;
+  h3{
+    padding-bottom: 30px;
+  }
+  form{
+    margin: 0 auto;
+    position: relative;
+    input[type="text"]{
+      width: 90%;
+      height: 45px;
+      border: 2px solid $dark-peach;
+      color: $charcoal-grey;
+      padding: 5px;
+      &::placeholder{
+        font-style: italic;
+      }
+    }
+    button{
+      width: 9%;
+      height: 45px;
+      margin-left: -5px;
+      border: 2px solid $dark-peach;
+      border-left: 0;
+      background-color: white;
+      color: $charcoal-grey;
+    }
+    #advenced-research{
+      font-size: 16px;
+      color: $white-three;
+      position: absolute;
+      width: inherit;
+      line-height: 45px;
+    }
+  }
+}
