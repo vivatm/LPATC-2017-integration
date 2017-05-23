@@ -1,0 +1,31 @@
+.btn{
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: $charcoal-grey;
+  padding: 12px 20px;
+  border: solid $charcoal-grey 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.2s ease;
+  &:hover{
+    cursor: pointer;
+    color: $white-three;
+    background-color: $charcoal-grey;
+  }
+  &.social{
+    font-size: 16px;
+    color: $white-three;
+    border-color: $white-three;
+    text-transform: none;
+    display: block;
+    width: 210px;
+    margin: 0 auto;
+    &:hover{
+      color: $charcoal-grey;
+      background-color: $white-three;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.footer{
+  background-color: $charcoal-grey;
+  color: $white-two;
+  padding: 40px  0;
+  &>div{
+    text-align: center;
+    ul{
+      padding-top: 30px;
+      li{
+        padding: 5px 0;
+      }
+    }
+    h5{
+      margin-top: 30px;
+    }
+    span{
+      display: inline-block;
+      margin-top: 70px;
+    }
+    .btn{
+      margin: 15px auto;
+    }
+  }
+}

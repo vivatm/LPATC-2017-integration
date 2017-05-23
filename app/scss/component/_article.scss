@@ -1,5 +1,6 @@
 article{
   background-color: white;
+  overflow: hidden;
   a{
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -7,6 +8,15 @@ article{
     text-decoration: underline;
     & +a{
       float: right;
+    }
+  }
+  .image{
+    overflow: hidden;
+    &.span_6 + .text{
+      width: 51.25%;
+    }
+    &.span_7 + .text{
+      width: 42.75%;
     }
   }
   .title{
@@ -21,7 +31,8 @@ article{
     }
   }
   .content{
-    padding: 10px 30px 30px 30px;
+    padding: 30px;
+    padding-top: 20px;
     p{
       padding-bottom: 10px;
     }
@@ -29,27 +40,10 @@ article{
   .ariane{
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-  }
-}
-
-.main > div > article{
-  height: 415px;
-  overflow: hidden;
-  &:first-of-type{
-    background-color: $white-two;
-  }
-  &:last-of-type{
-    .title{
-      padding-bottom: 30px;
+    a{
+      &+a{
+        float: none;
+      }
     }
-    .image{
-      width: 34%;
-    }
-  }
-}
-
-.main > article{
-  .content{
-    padding-right: 0;
   }
 }

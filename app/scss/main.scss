@@ -1,8 +1,14 @@
-@import 'variables';
-@import 'fonts';
+@import 'abstracts/variables';
+@import 'abstracts/fonts';
 
-@import 'style';
+@import 'general';
+
+@import 'component/button';
+@import 'component/article';
 
 @import 'layout/header';
-@import 'layout/article';
 @import 'layout/rechercher';
+@import 'layout/highlight';
+@import 'layout/main';
+@import 'layout/aside';
+@import 'layout/footer';

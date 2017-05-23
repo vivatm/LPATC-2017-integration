@@ -1,0 +1,45 @@
+.main{
+  article{
+    .text{
+      position: relative;
+      &:after {
+      	right: 100%;
+      	top: 8%;
+      	border: solid transparent;
+      	content: "";
+      	height: 0;
+      	width: 0;
+      	position: absolute;
+      	pointer-events: none;
+      	border-color: rgba(255, 255, 255, 0);
+      	border-right-color: #ffffff;
+      	border-width: 20px;
+      }
+    }
+    &.span_12{
+      .image{
+        height: 350px;
+      }
+    }
+    &.span_6{
+      width: 48.2%;
+      .image{
+        height: 250px;
+      }
+      .text{
+        &:after{
+          top: inherit;
+          bottom: 100%;
+          left: 8%;
+          border-right-color: transparent;
+          border-bottom-color: #ffffff;
+        }
+      }
+    }
+  }
+  .voir-plus{
+    margin-top: 60px;
+    width: 100%;
+    text-align:center;
+  }
+}

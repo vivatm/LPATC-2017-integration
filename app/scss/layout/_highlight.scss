@@ -1,0 +1,27 @@
+.highlight {
+  article{
+    :first-of-type{
+      img{
+        height: 100%;
+      }
+    }
+    .content{
+      padding: 10px 30px 30px 30px;
+    }
+  }
+  &> div > article{
+    height: 415px;
+    &:first-of-type{
+      background-color: $white-two;
+    }
+    &:last-of-type{
+      width: 59.65%;
+      .title{
+        padding-bottom: 30px;
+      }
+      .image{
+        width: 34%;
+      }
+    }
+  }
+}

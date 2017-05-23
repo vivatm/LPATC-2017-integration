@@ -32,7 +32,8 @@
   font-size: 31px;
   font-weight: bold;
   line-height: 1.29;
-  color: #34414a; }
+  color: #34414a;
+  padding-bottom: 24px; }
 
 .icon {
   font-family: archiwiki-icons;
@@ -64,14 +65,15 @@ label {
   font-size: 20px;
   font-weight: bold;
   line-height: 1.3;
-  color: #34414a; }
+  color: #34414a;
+  padding: 5px 0; }
 
 .h4-likeinvert {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.3;
-  color: #273746; }
+  color: #fafafa; }
 
 .bandeauicon {
   font-family: archiwiki-icons;
@@ -212,7 +214,8 @@ p {
   font-size: 14px;
   line-height: 1.43;
   text-align: center;
-  color: #fafafa; }
+  color: #fafafa;
+  text-decoration: none; }
 
 .figcaption {
   font-family: 'Open Sans', sans-serif;
@@ -293,7 +296,7 @@ html, body {
   font-family: 'Open Sans', sans-serif; }
 
 img {
-  width: 100%; }
+  max-width: 100%; }
 
 .clearfix:after {
   content: '';
@@ -309,17 +312,24 @@ img {
 
 .wrapper {
   width: 1280px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 body {
   background-color: #fafafa; }
 
+section + section {
+  margin-top: 60px; }
+
 .col {
   display: block;
   float: left;
-  margin-left: 2.3%; }
-  .col:first-child {
+  margin-left: 30px; }
+  .col:first-of-type {
     margin-left: 0; }
+
+.row {
+  margin-top: 30px; }
 
 .span_1 {
   width: 6.2%; }
@@ -356,6 +366,70 @@ body {
 
 .span_12 {
   width: 100%; }
+
+.btn {
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #34414a;
+  padding: 12px 20px;
+  border: solid #34414a 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .btn:hover {
+    cursor: pointer;
+    color: #fafafa;
+    background-color: #34414a; }
+  .btn.social {
+    font-size: 16px;
+    color: #fafafa;
+    border-color: #fafafa;
+    text-transform: none;
+    display: block;
+    width: 210px;
+    margin: 0 auto; }
+    .btn.social:hover {
+      color: #34414a;
+      background-color: #fafafa; }
+
+article {
+  background-color: white;
+  overflow: hidden; }
+  article a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #a65447;
+    text-decoration: underline; }
+    article a + a {
+      float: right; }
+  article .image {
+    overflow: hidden; }
+    article .image.span_6 + .text {
+      width: 51.25%; }
+    article .image.span_7 + .text {
+      width: 42.75%; }
+  article .title {
+    padding: 30px 30px 0 30px; }
+    article .title.decale {
+      margin-left: -110px;
+      background-color: white;
+      padding-bottom: 30px; }
+    article .title h3 {
+      padding: 5px 0; }
+  article .content {
+    padding: 30px;
+    padding-top: 20px; }
+    article .content p {
+      padding-bottom: 10px; }
+  article .ariane {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px; }
+    article .ariane a + a {
+      float: none; }
 
 #header {
   height: 150px; }
@@ -397,57 +471,76 @@ body {
     text-align: center;
     font-size: 40px;
     line-height: 150px;
-    color: #34414a; }
+    color: #34414a;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    #header #search > a {
+      height: 100%;
+      width: 100%;
+      display: block; }
+      #header #search > a:visited {
+        color: #34414a; }
+    #header #search .rechercher {
+      display: none;
+      position: absolute;
+      left: 0;
+      line-height: initial;
+      font-size: initial;
+      cursor: default; }
+    #header #search.open {
+      background-color: #a65447; }
+      #header #search.open a {
+        color: #fafafa; }
+      #header #search.open .rechercher {
+        display: block; }
+    #header #search:hover {
+      background-color: #a65447;
+      cursor: pointer; }
+      #header #search:hover a {
+        color: #fafafa; }
   #header .menu {
-    float: left;
-    width: 170px; }
+    float: right;
+    width: 170px;
+    height: 100%;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     #header .menu #menu-icon {
-      margin-top: 30%;
+      padding-top: 30%;
       text-transform: uppercase;
       font-size: 18px;
       text-align: center;
-      color: #34414a; }
+      color: #34414a;
+      height: 100%; }
       #header .menu #menu-icon .fa {
         font-size: 40px;
         display: block; }
-
-article {
-  background-color: white; }
-  article a {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #a65447;
-    text-decoration: underline; }
-    article a + a {
-      float: right; }
-  article .title {
-    padding: 30px 30px 0 30px; }
-    article .title.decale {
-      margin-left: -110px;
-      background-color: white;
-      padding-bottom: 30px; }
-    article .title h3 {
-      padding: 5px 0; }
-  article .content {
-    padding: 10px 30px 30px 30px; }
-    article .content p {
-      padding-bottom: 10px; }
-  article .ariane {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px; }
-
-.main > div > article {
-  height: 415px;
-  overflow: hidden; }
-  .main > div > article:first-of-type {
-    background-color: #ebebeb; }
-  .main > div > article:last-of-type .title {
-    padding-bottom: 30px; }
-  .main > div > article:last-of-type .image {
-    width: 34%; }
-
-.main > article .content {
-  padding-right: 0; }
+    #header .menu:hover {
+      background-color: #455763;
+      cursor: pointer; }
+      #header .menu:hover #menu-icon {
+        color: #fafafa; }
+    #header .menu nav {
+      display: none;
+      position: absolute;
+      left: 0;
+      background-color: #455763;
+      color: #fafafa; }
+      #header .menu nav > div {
+        padding: 40px; }
+        #header .menu nav > div ul {
+          margin-top: 15px; }
+          #header .menu nav > div ul li {
+            padding: 5px 0; }
+            #header .menu nav > div ul li a {
+              text-decoration: none; }
+        #header .menu nav > div:last-of-type {
+          text-align: center; }
+    #header .menu.open {
+      background-color: #455763; }
+      #header .menu.open #menu-icon {
+        color: #fafafa; }
+      #header .menu.open nav {
+        display: block; }
 
 .rechercher {
   background-color: #a65447;
@@ -484,3 +577,86 @@ article {
       position: absolute;
       width: inherit;
       line-height: 45px; }
+
+.highlight article :first-of-type img {
+  height: 100%; }
+
+.highlight article .content {
+  padding: 10px 30px 30px 30px; }
+
+.highlight > div > article {
+  height: 415px; }
+  .highlight > div > article:first-of-type {
+    background-color: #ebebeb; }
+  .highlight > div > article:last-of-type {
+    width: 59.65%; }
+    .highlight > div > article:last-of-type .title {
+      padding-bottom: 30px; }
+    .highlight > div > article:last-of-type .image {
+      width: 34%; }
+
+.main article .text {
+  position: relative; }
+  .main article .text:after {
+    right: 100%;
+    top: 8%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #ffffff;
+    border-width: 20px; }
+
+.main article.span_12 .image {
+  height: 350px; }
+
+.main article.span_6 {
+  width: 48.2%; }
+  .main article.span_6 .image {
+    height: 250px; }
+  .main article.span_6 .text:after {
+    top: inherit;
+    bottom: 100%;
+    left: 8%;
+    border-right-color: transparent;
+    border-bottom-color: #ffffff; }
+
+.main .voir-plus {
+  margin-top: 60px;
+  width: 100%;
+  text-align: center; }
+
+.aside article {
+  background: #ffffff url("../images/comment.png") no-repeat;
+  background-size: 30%;
+  background-position-y: 70%;
+  background-position-x: 10%;
+  margin-top: 30px; }
+  .aside article:first-of-type {
+    margin-top: 0; }
+
+.aside .voir-plus {
+  margin-top: 60px;
+  width: 100%;
+  text-align: center; }
+
+.footer {
+  background-color: #34414a;
+  color: #ebebeb;
+  padding: 40px  0; }
+  .footer > div {
+    text-align: center; }
+    .footer > div ul {
+      padding-top: 30px; }
+      .footer > div ul li {
+        padding: 5px 0; }
+    .footer > div h5 {
+      margin-top: 30px; }
+    .footer > div span {
+      display: inline-block;
+      margin-top: 70px; }
+    .footer > div .btn {
+      margin: 15px auto; }

@@ -46,18 +46,92 @@
     font-size: 40px;
     line-height: $header-height;
     color: $charcoal-grey;
+    transition: all 0.2s ease;
+    &>a{
+      height: 100%;
+      width: 100%;
+      display: block;
+      &:visited{
+        color: $charcoal-grey;
+      }
+    }
+    .rechercher{
+      display: none;
+      position:absolute;
+      left: 0;
+      line-height: initial;
+      font-size: initial;
+      cursor: default;
+    }
+    &.open{
+      background-color: $earth;
+      a{
+        color: $white-three;
+      }
+      .rechercher{
+        display: block;
+      }
+    }
+    &:hover{
+      background-color: $earth;
+      a{
+        color: $white-three;
+      }
+      cursor: pointer;
+    }
   }
   .menu{
-    float: left;
+    float: right;
     width: 170px;
+    height: 100%;
+    transition: all 0.3s ease;
     #menu-icon{
-      margin-top: 30%;
+      padding-top: 30%;
       text-transform: uppercase;
       font-size: 18px;
       text-align: center;
       color: $charcoal-grey;
+      height: 100%;
       .fa{
         font-size: 40px;
+        display: block;
+      }
+    }
+    &:hover{
+      background-color: $slate;
+      cursor: pointer;
+      #menu-icon{
+        color: $white-three;
+      }
+    }
+    nav{
+      display: none;
+      position: absolute;
+      left: 0;
+      background-color: $slate;
+      color: $white-three;
+      &>div{
+        padding: 40px;
+        ul{
+          margin-top: 15px;
+          li{
+            padding: 5px 0;
+            a{
+              text-decoration: none;
+            }
+          }
+        }
+        &:last-of-type{
+          text-align: center;
+        }
+      }
+    }
+    &.open{
+      background-color: $slate;
+      #menu-icon{
+        color: $white-three;
+      }
+      nav{
         display: block;
       }
     }
