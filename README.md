@@ -1,7 +1,7 @@
-# LPATC-2017-integration
+# LPATC-2017-integration - Marianne VIVAT
 
-# TO RUN GULP CSS COMPILATION :
-# gulp sass
+# to install gulp :
+# npm install
 #
-# TO WATCH :
+# to watch :
 # gulp watch
