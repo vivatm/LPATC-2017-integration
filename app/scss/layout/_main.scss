@@ -22,7 +22,10 @@
       }
     }
     &.span_6{
-      width: 48.2%;
+      width: 100%;
+      @include breakpoint(tablet) {
+        width: 48.2%;
+      }
       .image{
         height: 250px;
       }

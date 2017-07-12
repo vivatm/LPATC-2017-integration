@@ -13,16 +13,24 @@ article{
   .image{
     overflow: hidden;
     &.span_6 + .text{
-      width: 51.25%;
+      width: 100%;
+      @include breakpoint(tablet) {
+        width: 51.25%;
+      }
     }
     &.span_7 + .text{
-      width: 42.75%;
+      width: 100%;
+      @include breakpoint(tablet) {
+        width: 42.75%;
+      }
     }
   }
   .title{
     padding: 30px 30px 0 30px;
     &.decale{
-      margin-left: -110px;
+      @include breakpoint(tablet) {
+        margin-left: -110px;
+      }
       background-color: white;
       padding-bottom: 30px;
     }

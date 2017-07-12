@@ -14,6 +14,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */
+/*COLORS*/
+/*BREAKPOINTS*/
 'Fira Mono', monospace
 .iconcomment {
   font-family: archiwiki-icons;
@@ -311,9 +313,12 @@ img {
   flex-wrap: wrap; }
 
 .wrapper {
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
   position: relative; }
+  @media (min-width: 1280px) {
+    .wrapper {
+      width: 1280px; } }
 
 body {
   background-color: #fafafa; }
@@ -332,37 +337,70 @@ section + section {
   margin-top: 30px; }
 
 .span_1 {
-  width: 6.2%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .span_1 {
+      width: 6.2%; } }
 
 .span_2 {
-  width: 14.75%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .span_2 {
+      width: 14.75%; } }
 
 .span_3 {
-  width: 23.25%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .span_3 {
+      width: 23.25%; } }
 
 .span_4 {
-  width: 31.75%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .span_4 {
+      width: 31.75%; } }
 
 .span_5 {
-  width: 40.25%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .span_5 {
+      width: 40.25%; } }
 
 .span_6 {
-  width: 48.75%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .span_6 {
+      width: 48.75%; } }
 
 .span_7 {
-  width: 57.25%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .span_7 {
+      width: 57.25%; } }
 
 .span_8 {
-  width: 65.75%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .span_8 {
+      width: 65.75%; } }
 
 .span_9 {
-  width: 74.25%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .span_9 {
+      width: 74.25%; } }
 
 .span_10 {
-  width: 82.75%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .span_10 {
+      width: 82.75%; } }
 
 .span_11 {
-  width: 91.25%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .span_11 {
+      width: 91.25%; } }
 
 .span_12 {
   width: 100%; }
@@ -409,15 +447,23 @@ article {
   article .image {
     overflow: hidden; }
     article .image.span_6 + .text {
-      width: 51.25%; }
+      width: 100%; }
+      @media (min-width: 768px) {
+        article .image.span_6 + .text {
+          width: 51.25%; } }
     article .image.span_7 + .text {
-      width: 42.75%; }
+      width: 100%; }
+      @media (min-width: 768px) {
+        article .image.span_7 + .text {
+          width: 42.75%; } }
   article .title {
     padding: 30px 30px 0 30px; }
     article .title.decale {
-      margin-left: -110px;
       background-color: white;
       padding-bottom: 30px; }
+      @media (min-width: 768px) {
+        article .title.decale {
+          margin-left: -110px; } }
     article .title h3 {
       padding: 5px 0; }
   article .content {
@@ -449,10 +495,17 @@ article {
       margin-top: 15px; }
   #header .navbar {
     height: 100%;
-    float: left; }
+    float: left;
+    width: 100%; }
+    @media (min-width: 1024px) {
+      #header .navbar {
+        width: inherit; } }
     #header .navbar ul {
       display: table;
       height: 100%; }
+      @media (min-width: 425px) {
+        #header .navbar ul {
+          width: 100%; } }
     #header .navbar li {
       display: table-cell;
       padding: 0 20px;
@@ -464,7 +517,14 @@ article {
         text-align: center;
         color: #34414a;
         text-decoration: none; }
+        @media (min-width: 1024px) {
+          #header .navbar li a {
+            font-size: 15px; } }
+  @media (min-width: 1024px) and (min-width: 1280px) {
+    #header .navbar li a {
+      font-size: 18px; } }
   #header #search {
+    display: none;
     height: 100%;
     float: left;
     width: 100px;
@@ -474,6 +534,9 @@ article {
     color: #34414a;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease; }
+    @media (min-width: 1280px) {
+      #header #search {
+        display: block; } }
     #header #search > a {
       height: 100%;
       width: 100%;
@@ -500,10 +563,18 @@ article {
         color: #fafafa; }
   #header .menu {
     float: right;
-    width: 170px;
-    height: 100%;
+    width: 20%;
     -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 0; }
+    @media (min-width: 768px) {
+      #header .menu {
+        width: 170px;
+        height: 100%; } }
+    @media (min-width: 1280px) {
+      #header .menu {
+        position: initial; } }
     #header .menu #menu-icon {
       padding-top: 30%;
       text-transform: uppercase;
@@ -578,8 +649,10 @@ article {
       width: inherit;
       line-height: 45px; }
 
-.highlight article :first-of-type img {
-  height: 100%; }
+@media (min-width: 768px) {
+  .highlight article :first-of-type img {
+    height: 100%;
+    max-width: inherit; } }
 
 .highlight article .content {
   padding: 10px 30px 30px 30px; }
@@ -589,11 +662,17 @@ article {
   .highlight > div > article:first-of-type {
     background-color: #ebebeb; }
   .highlight > div > article:last-of-type {
-    width: 59.65%; }
+    width: 100%; }
+    @media (min-width: 768px) {
+      .highlight > div > article:last-of-type {
+        width: 59.65%; } }
     .highlight > div > article:last-of-type .title {
       padding-bottom: 30px; }
     .highlight > div > article:last-of-type .image {
-      width: 34%; }
+      width: 100%; }
+      @media (min-width: 768px) {
+        .highlight > div > article:last-of-type .image {
+          width: 34%; } }
 
 .main article .text {
   position: relative; }
@@ -614,7 +693,10 @@ article {
   height: 350px; }
 
 .main article.span_6 {
-  width: 48.2%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .main article.span_6 {
+      width: 48.2%; } }
   .main article.span_6 .image {
     height: 250px; }
   .main article.span_6 .text:after {

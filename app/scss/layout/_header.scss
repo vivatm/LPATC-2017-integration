@@ -20,9 +20,16 @@
   .navbar{
     height: 100%;
     float: left;
+    width: 100%;
+    @include breakpoint(laptop) {
+      width: inherit;
+    }
     ul{
       display: table;
       height: 100%;
+      @include breakpoint(phablet) {
+        width: 100%;
+      }
     }
     li{
       display: table-cell;
@@ -35,10 +42,20 @@
         text-align: center;
         color: $charcoal-grey;
         text-decoration: none;
+        @include breakpoint(laptop) {
+          font-size: 15px;
+          @include breakpoint(desktop) {
+            font-size: 18px;
+          }
+        }
       }
     }
   }
   #search{
+    display: none;
+    @include breakpoint(desktop) {
+      display: block;
+    }
     height: 100%;
     float: left;
     width: 100px;
@@ -82,9 +99,17 @@
   }
   .menu{
     float: right;
-    width: 170px;
-    height: 100%;
+    width: 20%;
     transition: all 0.3s ease;
+    position: absolute;
+    right: 0;
+    @include breakpoint(tablet) {
+      width: 170px;
+      height: 100%;
+    }
+    @include breakpoint(desktop) {
+      position: initial;
+    }
     #menu-icon{
       padding-top: 30%;
       text-transform: uppercase;

@@ -15,6 +15,8 @@
     limitations under the License.
 */
 
+/*COLORS*/
+
 $sea: #32a398;
 $greeny-blue: #3abdaf;
 $aqua-marine: #42d7c8;
@@ -32,5 +34,11 @@ $tiffany-blue: #7eeaee;
 $white-three: #fafafa;
 $dark: #222a30;
 $slate-85: rgba(70, 87, 99, 0.85);
+
+/*BREAKPOINTS*/
+$desktop: 1280px;
+$laptop: 1024px;
+$tablet: 768px;
+$max-mobile: 425px;
 
 $header-height: 150px;
