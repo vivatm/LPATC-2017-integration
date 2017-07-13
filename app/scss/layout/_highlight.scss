@@ -13,22 +13,63 @@
     }
   }
   &> div > article{
-    height: 415px;
+    @include breakpoint(tablet) {
+      height: 415px;
+    }
     &:first-of-type{
       background-color: $white-two;
     }
     &:last-of-type{
       width: 100%;
+      background-color: white;
       @include breakpoint(tablet) {
         width: 59.65%;
       }
+      .content {
+        order: 3;
+        @include breakpoint(tablet) {
+          order: initial;
+        }
+      }
       .title{
-        padding-bottom: 30px;
+        @include breakpoint(tablet) {
+          padding-bottom: 30px;
+        }
+        order: 2;
+        position: relative;
+        &:after {
+          border: solid transparent;
+          content: "";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-width: 20px;
+          bottom: 100%;
+          left: 8%;
+          border-bottom-color: #ffffff;
+        }
+        @include breakpoint(tablet) {
+          order: initial;
+          &:after {
+            display: none;
+          }
+        }
       }
       .image{
         width: 100%;
+        order: 1;
+        height: 50vw;
         @include breakpoint(tablet) {
           width: 34%;
+          height: initial;
+          order: initial;
+        }
+        img {
+          width: 100%;
+          @include breakpoint(tablet) {
+            width: initial;
+          }
         }
       }
     }

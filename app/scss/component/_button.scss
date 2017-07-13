@@ -1,6 +1,9 @@
 .btn{
   border-radius: 3px;
-  font-size: 18px;
+  font-size: 14px;
+  @include breakpoint(tablet) {
+    font-size: 18px;
+  }
   font-weight: 600;
   text-align: center;
   color: $charcoal-grey;

@@ -9,23 +9,31 @@
     margin: 0 auto;
     position: relative;
     input[type="text"]{
-      width: 90%;
+      width: 80%;
       height: 45px;
       border: 2px solid $dark-peach;
+      border-right: 0;
       color: $charcoal-grey;
       padding: 5px;
       &::placeholder{
         font-style: italic;
       }
+      @include breakpoint(tablet) {
+        width: 90%;
+        border-right: 2px solid $dark-peach;
+      }
     }
     button{
-      width: 9%;
+      width: 19%;
       height: 45px;
       margin-left: -5px;
       border: 2px solid $dark-peach;
       border-left: 0;
       background-color: white;
       color: $charcoal-grey;
+      @include breakpoint(tablet) {
+        width: 9%;
+      }
     }
     #advenced-research{
       font-size: 16px;
@@ -33,6 +41,10 @@
       position: absolute;
       width: inherit;
       line-height: 45px;
+      display: none;
+      @include breakpoint(tablet) {
+
+      }
     }
   }
 }
