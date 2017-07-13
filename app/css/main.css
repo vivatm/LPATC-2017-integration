@@ -498,8 +498,7 @@ article {
       @media (min-width: 768px) {
         article .title.decale {
           margin-left: -110px;
-          padding: 0;
-          padding-bottom: 20px; } }
+          padding: 30px; } }
     article .title h3 {
       padding: 5px 0; }
   article .content {
