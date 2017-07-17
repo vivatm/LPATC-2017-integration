@@ -27,9 +27,12 @@ img{
 }
 
  .wrapper{
-   width: 1280px;
+   width: 100%;
    margin: 0 auto;
 	 position: relative;
+   @include breakpoint(desktop) {
+     width: 1280px;
+   }
  }
 
  body{
@@ -37,65 +40,105 @@ img{
  }
 
  section + section{
-	 margin-top: 60px;
+   margin-top: 20px;
+   @include breakpoint(tablet) {
+     margin-top: 60px;
+   }
  }
 
  .col {
  	display: block;
  	float:left;
  	//margin-left: 2.3%;
-	margin-left: 30px;
+   @include breakpoint(tablet) {
+     margin-left: 30px;
+   }
   &:first-of-type{
     margin-left: 0;
   }
  }
 
  .row{
-	 margin-top: 30px;
+   @include breakpoint(tablet) {
+     margin-top: 30px;
+   }
  }
 
 .span_1 {
-  width : 6.2%;
+  width : 100%;
+  @include breakpoint(tablet) {
+    width: 6.2%;
+  }
 }
 
 .span_2 {
-  width : 14.75%;
+  width : 100%;
+  @include breakpoint(tablet) {
+    width: 14.75%;
+  }
 }
 
 .span_3 {
-  width : 23.25%;
+  width : 100%;
+  @include breakpoint(tablet) {
+    width: 23.25%;
+  }
 }
 
 .span_4 {
-  width : 31.75%;
+  width : 100%;
+  @include breakpoint(tablet) {
+    width: 31.75%;
+  }
 }
 
 .span_5 {
-  width : 40.25%;
+  width : 100%;
+  @include breakpoint(tablet) {
+    width: 40.25%;
+  }
 }
 
 .span_6 {
-  width : 48.75%;
+  width : 100%;
+  @include breakpoint(tablet) {
+    width: 48.75%;
+  }
 }
 
 .span_7 {
-  width : 57.25%;
+  width : 100%;
+  @include breakpoint(tablet) {
+    width: 57.25%;
+  }
 }
 
 .span_8 {
-  width : 65.75%;
+  width : 100%;
+  @include breakpoint(tablet) {
+    width: 65.75%;
+  }
 }
 
 .span_9 {
-  width : 74.25%;
+  width : 100%;
+  @include breakpoint(tablet) {
+    width: 74.25%;
+  }
 }
 
 .span_10 {
-  width : 82.75%;
+  width : 100%;
+  @include breakpoint(tablet) {
+    width: 82.75%;
+  }
 }
 
 .span_11 {
-  width : 91.25%;
+  width : 100%;
+  @include breakpoint(tablet) {
+    width: 91.25%;
+  }
 }
 
 .span_12 {

@@ -1,9 +1,11 @@
 article{
-  background-color: white;
   overflow: hidden;
   a{
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
+    @include breakpoint(tablet) {
+      font-size: 14px;
+    }
     color: $earth;
     text-decoration: underline;
     & +a{
@@ -13,18 +15,45 @@ article{
   .image{
     overflow: hidden;
     &.span_6 + .text{
-      width: 51.25%;
+      width: 100%;
+      @include breakpoint(tablet) {
+        width: 51.25%;
+      }
     }
     &.span_7 + .text{
-      width: 42.75%;
+      width: 100%;
+      margin: 20px;
+      margin-top: -30px;
+      @include breakpoint(tablet) {
+        width: 42.75%;
+        margin: 0;
+      }
+      .content {
+        padding: 15px;
+      }
+      @include breakpoint(tablet) {
+        .content {
+          padding: 10px 30px 30px 30px;
+        }
+      }
     }
   }
+  .text{
+    background-color: white;
+  }
   .title{
-    padding: 30px 30px 0 30px;
+    padding: 20px 30px 0 30px;
+    @include breakpoint(tablet) {
+      padding-top: 30px;
+    }
     &.decale{
-      margin-left: -110px;
+      padding: 15px;
+      padding-bottom: 0;
       background-color: white;
-      padding-bottom: 30px;
+      @include breakpoint(tablet) {
+        margin-left: -110px;
+        padding: 30px;
+      }
     }
     h3{
       padding: 5px 0;
@@ -39,8 +68,15 @@ article{
   }
   .ariane{
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
+    @include breakpoint(tablet) {
+      font-size: 14px;
+    }
     a{
+      font-size: 12px;
+      @include breakpoint(tablet) {
+        font-size: 14px;
+      }
       &+a{
         float: none;
       }
