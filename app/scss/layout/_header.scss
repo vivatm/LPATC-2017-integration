@@ -1,51 +1,91 @@
 #header{
-  height: 150px;
+  height: 75px;
+  background-color: $slate;
+  @include breakpoint(tablet) {
+    height: 150px;
+    background-color: white;
+  }
+  display: flex;
+  @include breakpoint(tablet) {
+    display: block;
+  }
   .logo{
     float: left;
-    text-align: center;
     height: 100%;
+    order: 1;
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
     .logo-img{
-      width: 200px;
-      margin: 0 auto;
-      margin-top: 12%;
+      height: 35px;
+      margin: 20px 30px;
+      @include breakpoint(tablet) {
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 12%;
+        height: initial;
+      }
+      img {
+          height: 100%;
+        @include breakpoint(tablet) {
+          height: initial;
+        }
+      }
     }
     span{
       font-family: 'Open Sans', sans-serif;
       font-size: 12px;
       color: $slate-85;
-      display: block;
       margin-top: 15px;
+      display: none;
+      @include breakpoint(tablet) {
+        display: block;
+      }
     }
   }
   .navbar{
     height: 100%;
     float: left;
     width: 100%;
+    order: 3;
     @include breakpoint(laptop) {
       width: inherit;
     }
     ul{
-      display: table;
       height: 100%;
-      @include breakpoint(phablet) {
-        width: 100%;
+      @include breakpoint(tablet) {
+        display: table;
+        @include breakpoint(phablet) {
+          width: 100%;
+        }
       }
     }
     li{
-      display: table-cell;
       padding: 0 20px;
-      line-height: $header-height;
+      &:first-of-type {
+        display: none;
+      }
+      @include breakpoint(tablet) {
+        display: table-cell;
+        line-height: $header-height;
+        &:first-of-type {
+          display: table-cell;
+        }
+      }
       a{
-        text-transform: uppercase;
         font-family: 'Open Sans', sans-serif;
         font-size: 18px;
         text-align: center;
-        color: $charcoal-grey;
+        color: white;
         text-decoration: none;
-        @include breakpoint(laptop) {
-          font-size: 15px;
-          @include breakpoint(desktop) {
-            font-size: 18px;
+        @include breakpoint(tablet) {
+          text-transform: uppercase;
+          color: $charcoal-grey;
+          @include breakpoint(laptop) {
+            font-size: 15px;
+            @include breakpoint(desktop) {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -101,25 +141,31 @@
     float: right;
     width: 20%;
     transition: all 0.3s ease;
-    position: absolute;
-    right: 0;
+    order: 2;
     @include breakpoint(tablet) {
       width: 170px;
       height: 100%;
     }
-    @include breakpoint(desktop) {
-      position: initial;
-    }
     #menu-icon{
-      padding-top: 30%;
+      padding-top: 20px;
       text-transform: uppercase;
-      font-size: 18px;
+      font-size: 10px;
       text-align: center;
-      color: $charcoal-grey;
+      color: $white-three;
       height: 100%;
+      @include breakpoint(tablet) {
+        padding-top: 30%;
+        font-size: 18px;
+        color: $charcoal-grey;
+      }
       .fa{
-        font-size: 40px;
+        font-size: 25px;
         display: block;
+        color: $white-three;
+        @include breakpoint(tablet) {
+          font-size: 40px;
+          color: $charcoal-grey;
+        }
       }
     }
     &:hover{
@@ -129,18 +175,63 @@
         color: $white-three;
       }
     }
+    .wrapper {
+      background-color: $slate-transparent;
+      padding-bottom: 10px;
+      @include breakpoint(tablet) {
+        background-color: $slate;
+        padding-bottom: 0;
+      }
+    }
     nav{
       display: none;
       position: absolute;
       left: 0;
       background-color: $slate;
       color: $white-three;
+      z-index: 99;
       &>div{
-        padding: 40px;
+        padding: 0 40px;
+        h4 {
+          padding: 15px 0 10px;
+          border-bottom: 1px solid $white-three;
+          .fa {
+            float: right;
+          }
+          @include breakpoint(tablet) {
+            padding: 0;
+            border-bottom: none;
+            .fa {
+              display: none;
+            }
+          }
+          &.open + ul {
+            display: block;
+          }
+        }
+        h4 + ul {
+          display: none;
+          margin-left: 30px;
+          @include breakpoint(tablet) {
+            margin-left: 0;
+            margin-top: 15px;
+            display: block;
+          }
+        }
+        @include breakpoint(tablet) {
+          padding: 40px;
+        }
         ul{
-          margin-top: 15px;
+          @include breakpoint(tablet) {
+            display: block;
+          }
           li{
-            padding: 5px 0;
+            padding: 15px 0 10px;
+            border-bottom: 1px solid $white-three;
+            @include breakpoint(tablet) {
+              padding: 5px 0;
+              border-bottom: none;
+            }
             a{
               text-decoration: none;
             }
@@ -148,6 +239,29 @@
         }
         &:last-of-type{
           text-align: center;
+          .image {
+            display: none;
+            @include breakpoint(tablet) {
+              display: block;
+            }
+          }
+          li {
+            border-bottom: none;
+            display: inline-block;
+            &:first-of-type{
+              float: left;
+            }
+            &:last-of-type{
+              float: right;
+            }
+            @include breakpoint(tablet) {
+              display: list-item;
+              &:first-of-type,
+              &:last-of-type {
+                float: none;
+              }
+            }
+          }
         }
       }
     }
@@ -155,6 +269,9 @@
       background-color: $slate;
       #menu-icon{
         color: $white-three;
+        .fa {
+          color: $white-three;
+        }
       }
       nav{
         display: block;

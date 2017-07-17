@@ -83,10 +83,13 @@ label {
 
 .h4-likeinvert {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.3;
-  color: #fafafa; }
+  color: #fafafa;
+  font-size: 18px; }
+  @media (min-width: 768px) {
+    .h4-likeinvert {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.3; } }
 
 .bandeauicon {
   font-family: archiwiki-icons;
@@ -521,49 +524,92 @@ article {
         float: none; }
 
 #header {
-  height: 150px; }
+  height: 75px;
+  background-color: #455763;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (min-width: 768px) {
+    #header {
+      height: 150px;
+      background-color: white; } }
+  @media (min-width: 768px) {
+    #header {
+      display: block; } }
   #header .logo {
     float: left;
-    text-align: center;
-    height: 100%; }
+    height: 100%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1; }
+    @media (min-width: 768px) {
+      #header .logo {
+        text-align: center; } }
     #header .logo .logo-img {
-      width: 200px;
-      margin: 0 auto;
-      margin-top: 12%; }
+      height: 35px;
+      margin: 20px 30px; }
+      @media (min-width: 768px) {
+        #header .logo .logo-img {
+          width: 200px;
+          margin: 0 auto;
+          margin-top: 12%;
+          height: initial; } }
+      #header .logo .logo-img img {
+        height: 100%; }
+        @media (min-width: 768px) {
+          #header .logo .logo-img img {
+            height: initial; } }
     #header .logo span {
       font-family: 'Open Sans', sans-serif;
       font-size: 12px;
       color: rgba(70, 87, 99, 0.85);
-      display: block;
-      margin-top: 15px; }
+      margin-top: 15px;
+      display: none; }
+      @media (min-width: 768px) {
+        #header .logo span {
+          display: block; } }
   #header .navbar {
     height: 100%;
     float: left;
-    width: 100%; }
+    width: 100%;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3; }
     @media (min-width: 1024px) {
       #header .navbar {
         width: inherit; } }
     #header .navbar ul {
-      display: table;
       height: 100%; }
-      @media (min-width: 425px) {
+      @media (min-width: 768px) {
         #header .navbar ul {
-          width: 100%; } }
+          display: table; } }
+  @media (min-width: 768px) and (min-width: 425px) {
+    #header .navbar ul {
+      width: 100%; } }
     #header .navbar li {
-      display: table-cell;
-      padding: 0 20px;
-      line-height: 150px; }
+      padding: 0 20px; }
+      #header .navbar li:first-of-type {
+        display: none; }
+      @media (min-width: 768px) {
+        #header .navbar li {
+          display: table-cell;
+          line-height: 150px; }
+          #header .navbar li:first-of-type {
+            display: table-cell; } }
       #header .navbar li a {
-        text-transform: uppercase;
         font-family: 'Open Sans', sans-serif;
         font-size: 18px;
         text-align: center;
-        color: #34414a;
+        color: white;
         text-decoration: none; }
-        @media (min-width: 1024px) {
+        @media (min-width: 768px) {
           #header .navbar li a {
-            font-size: 15px; } }
-  @media (min-width: 1024px) and (min-width: 1280px) {
+            text-transform: uppercase;
+            color: #34414a; } }
+  @media (min-width: 768px) and (min-width: 1024px) {
+    #header .navbar li a {
+      font-size: 15px; } }
+  @media (min-width: 768px) and (min-width: 1024px) and (min-width: 1280px) {
     #header .navbar li a {
       font-size: 18px; } }
   #header #search {
@@ -609,50 +655,115 @@ article {
     width: 20%;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    position: absolute;
-    right: 0; }
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2; }
     @media (min-width: 768px) {
       #header .menu {
         width: 170px;
         height: 100%; } }
-    @media (min-width: 1280px) {
-      #header .menu {
-        position: initial; } }
     #header .menu #menu-icon {
-      padding-top: 30%;
+      padding-top: 20px;
       text-transform: uppercase;
-      font-size: 18px;
+      font-size: 10px;
       text-align: center;
-      color: #34414a;
+      color: #fafafa;
       height: 100%; }
+      @media (min-width: 768px) {
+        #header .menu #menu-icon {
+          padding-top: 30%;
+          font-size: 18px;
+          color: #34414a; } }
       #header .menu #menu-icon .fa {
-        font-size: 40px;
-        display: block; }
+        font-size: 25px;
+        display: block;
+        color: #fafafa; }
+        @media (min-width: 768px) {
+          #header .menu #menu-icon .fa {
+            font-size: 40px;
+            color: #34414a; } }
     #header .menu:hover {
       background-color: #455763;
       cursor: pointer; }
       #header .menu:hover #menu-icon {
         color: #fafafa; }
+    #header .menu .wrapper {
+      background-color: rgba(70, 87, 99, 0.95);
+      padding-bottom: 10px; }
+      @media (min-width: 768px) {
+        #header .menu .wrapper {
+          background-color: #455763;
+          padding-bottom: 0; } }
     #header .menu nav {
       display: none;
       position: absolute;
       left: 0;
       background-color: #455763;
-      color: #fafafa; }
+      color: #fafafa;
+      z-index: 99; }
       #header .menu nav > div {
-        padding: 40px; }
-        #header .menu nav > div ul {
-          margin-top: 15px; }
-          #header .menu nav > div ul li {
-            padding: 5px 0; }
-            #header .menu nav > div ul li a {
-              text-decoration: none; }
+        padding: 0 40px; }
+        #header .menu nav > div h4 {
+          padding: 15px 0 10px;
+          border-bottom: 1px solid #fafafa; }
+          #header .menu nav > div h4 .fa {
+            float: right; }
+          @media (min-width: 768px) {
+            #header .menu nav > div h4 {
+              padding: 0;
+              border-bottom: none; }
+              #header .menu nav > div h4 .fa {
+                display: none; } }
+          #header .menu nav > div h4.open + ul {
+            display: block; }
+        #header .menu nav > div h4 + ul {
+          display: none;
+          margin-left: 30px; }
+          @media (min-width: 768px) {
+            #header .menu nav > div h4 + ul {
+              margin-left: 0;
+              margin-top: 15px;
+              display: block; } }
+        @media (min-width: 768px) {
+          #header .menu nav > div {
+            padding: 40px; } }
+        @media (min-width: 768px) {
+          #header .menu nav > div ul {
+            display: block; } }
+        #header .menu nav > div ul li {
+          padding: 15px 0 10px;
+          border-bottom: 1px solid #fafafa; }
+          @media (min-width: 768px) {
+            #header .menu nav > div ul li {
+              padding: 5px 0;
+              border-bottom: none; } }
+          #header .menu nav > div ul li a {
+            text-decoration: none; }
         #header .menu nav > div:last-of-type {
           text-align: center; }
+          #header .menu nav > div:last-of-type .image {
+            display: none; }
+            @media (min-width: 768px) {
+              #header .menu nav > div:last-of-type .image {
+                display: block; } }
+          #header .menu nav > div:last-of-type li {
+            border-bottom: none;
+            display: inline-block; }
+            #header .menu nav > div:last-of-type li:first-of-type {
+              float: left; }
+            #header .menu nav > div:last-of-type li:last-of-type {
+              float: right; }
+            @media (min-width: 768px) {
+              #header .menu nav > div:last-of-type li {
+                display: list-item; }
+                #header .menu nav > div:last-of-type li:first-of-type, #header .menu nav > div:last-of-type li:last-of-type {
+                  float: none; } }
     #header .menu.open {
       background-color: #455763; }
       #header .menu.open #menu-icon {
         color: #fafafa; }
+        #header .menu.open #menu-icon .fa {
+          color: #fafafa; }
       #header .menu.open nav {
         display: block; }
 
